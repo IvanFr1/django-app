@@ -36,7 +36,7 @@ class CountRequestsMiddleware:
 
 
 class ThrottlingMiddleware:
-    THROTTLE_DURATION = 10
+    THROTTLE_DURATION = 0
 
     def __init__(self, get_response):
         self.get_response = get_response

@@ -1,6 +1,7 @@
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
+from .forms import UserBioForm, UploadFileForm
 
 # Create your views here.
 
@@ -16,15 +17,27 @@ def process_get_view(request: HttpRequest) -> HttpResponse:
     return render(request, 'requestdataapp/request-query-params.html', context=context)
 
 def user_form(request: HttpRequest) -> HttpResponse:
-    return render(request, "requestdataapp/user-bio-form.html")
+    context = {
+        "form": UserBioForm(),
+    }
+    return render(request, "requestdataapp/user-bio-form.html", context=context)
 
 def handle_file_upload(request: HttpRequest) -> HttpResponse:
-    if request.method == "POST" and request.FILES.get("myfile"):
-        myfile = request.FILES["myfile"]
-        if myfile.size > 1024 * 1024:
-            return HttpResponse('File size exceeds 1 MB limit')
-        fs = FileSystemStorage()
-        filename = fs.save(myfile.name, myfile)
-        print("saved file", filename)
+    if request.method == "POST":
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            # myfile = request.FILES["myfile"]
+            myfile = form.cleaned_data["file"]
+            if myfile.size > 1024 * 1024:
+                return HttpResponse('File size exceeds 1 MB limit')
+            fs = FileSystemStorage()
+            filename = fs.save(myfile.name, myfile)
+            print("saved file", filename)
+    else:
+        form = UploadFileForm()
 
-    return render(request, "requestdataapp/file-upload.html")
+    context = {
+        "form": form,
+    }
+
+    return render(request, "requestdataapp/file-upload.html", context=context)
