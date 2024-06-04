@@ -30,7 +30,12 @@ def login_view(request: HttpRequest) -> HttpResponse:
 class MyLogoutView(View):
     def get(self, request):
         logout(request)
-        return redirect('myauth:login')
+        return redirect('myauth:logout')
+
+
+def logout_view(request: HttpRequest):
+    logout(request)
+    return redirect(reverse('myauth:login'))
 
 
 def set_cookie(request: HttpRequest) -> HttpResponse:
