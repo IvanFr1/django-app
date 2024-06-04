@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.views import LogoutView
+from django.views import View
 
 
 # Create your views here.
@@ -26,13 +27,10 @@ def login_view(request: HttpRequest) -> HttpResponse:
     return render(request, 'myauth/login.html', {'error': 'Invalid login credentials'})
 
 
-class MyLogoutView(LogoutView):
-    next_page = reverse_lazy('myauth:login')
-
-
-def logout_view(request: HttpRequest):
-    logout(request)
-    return redirect(reverse('myauth:login'))
+class MyLogoutView(View):
+    def get(self, request):
+        logout(request)
+        return redirect('myauth:login')
 
 
 def set_cookie(request: HttpRequest) -> HttpResponse:
