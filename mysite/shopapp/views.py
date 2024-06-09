@@ -1,5 +1,5 @@
 from timeit import default_timer
-from typing import Any
+from django.forms import BaseModelForm
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404, reverse # type: ignore
 from django.contrib.auth.models import Group
@@ -8,6 +8,8 @@ from .forms import  GroupForm, ProductForm, OrderForm
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
+from django.core.exceptions import PermissionDenied
 
 
 class ShopIndexView(View):
@@ -54,10 +56,18 @@ class ProductsListView(ListView):
     queryset = Product.objects.filter(archived=False)
     
 
-class ProductCreateView(CreateView):
+class ProductCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
+ 
     model = Product
     fields = 'name', 'price', 'description', 'discount'
     success_url = reverse_lazy('shopapp:products_list')
+
+    def test_func(self):
+        return self.request.user.has_perm('shopapp.add_product') # type: ignore
+    
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        return super().form_valid(form)
 
 
 class ProductUpdateView(UpdateView):
@@ -65,11 +75,19 @@ class ProductUpdateView(UpdateView):
     fields = 'name', 'price', 'description', 'discount'
     template_name_suffix = '_update_form'
 
+    def get_object(self, queryset=None):
+        obj = super().get_object(queryset)
+        user = self.request.user
+        if not (user.is_superuser or (user.has_perm('change_product') or user == obj.created_by)): # type: ignore
+            raise PermissionDenied('You don`t have permission to change this product')
+        return obj
+
     def get_success_url(self):
         return reverse(
             'shopapp:product_details',
             kwargs={'pk': self.object.pk}, # type: ignore
         )
+        
 
 class ProductDeleteView(DeleteView):
     model = Product
@@ -82,14 +100,15 @@ class ProductDeleteView(DeleteView):
         return HttpResponseRedirect(success_url)
     
 
-class OrdersListView(ListView):
+class OrdersListView(LoginRequiredMixin, ListView):
     queryset = (
         Order.objects
         .select_related("user")
         .prefetch_related('products')
     )
 
-class OrderDetailView(DetailView):
+class OrderDetailView(PermissionRequiredMixin, DetailView):
+    permission_required = ['shopapp.view_order']
     queryset = (
         Order.objects
         .select_related("user")

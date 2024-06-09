@@ -6,6 +6,14 @@
 
 {% block body %}
     <h1>Update product</h1>
+    {% if perms_denied %}
+        <p>{{ perms_denied }}</p>
+        <div>
+            <a href='{% url "shopapp:product_details" pk=object.pk %}'>
+                Back to product #{{ object.pk }}
+            </a>
+        </div>
+    {% endif %}
     <div>
         <form method='post'>
             {% csrf_token %}
