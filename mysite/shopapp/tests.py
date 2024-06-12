@@ -20,6 +20,13 @@ class ProductCreateViewTestCase(TestCase):
     def setUp(self) -> None:
         self.product_name = ''.join(choices(ascii_letters, k=10))
         Product.objects.filter(name=self.product_name).delete()
+
+        self.user = User.objects.create_user(username='testuser', password='qwerty')
+
+        permission = Permission.objects.get(codename='add_product')
+        self.user.user_permissions.add(permission)
+
+        self.client.login(username='testuser', password='qwerty')
     
     def test_product_create_view(self):
         response = self.client.post(
