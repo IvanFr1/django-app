@@ -1,5 +1,5 @@
 from django.forms import BaseModelForm
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
@@ -84,3 +84,7 @@ def get_session_view(request: HttpRequest) -> HttpResponse:
     value = request.session.get('foobar', 'default')
     return HttpResponse(f'Session value: {value!r}')
 
+
+class FooBarView(View):
+    def get(self, request: HttpRequest) -> JsonResponse:
+        return JsonResponse({'foo': 'bar', 'spam': 'eggs'})

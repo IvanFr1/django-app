@@ -1,7 +1,7 @@
 from timeit import default_timer
 
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
-from django.shortcuts import render, reverse
+from django.shortcuts import render, reverse # type: ignore
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -51,7 +51,7 @@ class ProductUpdateView(UpdateView):
     def get_success_url(self):
         return reverse(
             "shopapp:product_details",
-            kwargs={"pk": self.object.pk},
+            kwargs={"pk": self.object.pk}, # type: ignore
         )
 
 
@@ -61,8 +61,8 @@ class ProductDeleteView(DeleteView):
 
     def form_valid(self, form):
         success_url = self.get_success_url()
-        self.object.archived = True
-        self.object.save()
+        self.object.archived = True # type: ignore
+        self.object.save() # type: ignore
         return HttpResponseRedirect(success_url)
 
 
@@ -81,3 +81,4 @@ class OrderDetailView(PermissionRequiredMixin, DetailView):
         .select_related("user")
         .prefetch_related("products")
     )
+    

@@ -1,0 +1,158 @@
+[
+    {
+        "model": "shopapp.product",
+        "pk": 1,
+        "fields": {
+            "name": "Laptop",
+            "description": "Lorem, ipsum dolor sit amet",
+            "price": "1999.00",
+            "discount": 0,
+            "creted_at": "2024-03-16T18:50:06.852Z",
+            "archived": true,
+            "created_by": null
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 2,
+        "fields": {
+            "name": "Desktop(new)",
+            "description": "It`s very smart",
+            "price": "2899.00",
+            "discount": 10,
+            "creted_at": "2024-03-16T18:50:06.852Z",
+            "archived": false,
+            "created_by": null
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 3,
+        "fields": {
+            "name": "Smartphone",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi magnam commodi maxime, qui porro voluptate voluptatem labore, saepe impedit explicabo modi nisi exercitationem sapiente esse non architecto possimus assumenda nostrum.",
+            "price": "987.00",
+            "discount": 25,
+            "creted_at": "2024-03-16T18:50:06.852Z",
+            "archived": true,
+            "created_by": null
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 4,
+        "fields": {
+            "name": "Tablet",
+            "description": "great tablet",
+            "price": "1234.00",
+            "discount": 0,
+            "creted_at": "2024-05-03T18:52:36.770Z",
+            "archived": false,
+            "created_by": null
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 5,
+        "fields": {
+            "name": "Phone2",
+            "description": "fgwed\r\ngreat",
+            "price": "111.00",
+            "discount": 0,
+            "creted_at": "2024-05-03T18:59:40.921Z",
+            "archived": true,
+            "created_by": null
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 6,
+        "fields": {
+            "name": "Phone 3",
+            "description": "phone 3",
+            "price": "999.00",
+            "discount": 12,
+            "creted_at": "2024-05-03T19:35:57.525Z",
+            "archived": false,
+            "created_by": null
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 7,
+        "fields": {
+            "name": "Tablet 2",
+            "description": "a new tablet",
+            "price": "1500.00",
+            "discount": 15,
+            "creted_at": "2024-05-03T19:38:54.649Z",
+            "archived": false,
+            "created_by": null
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 8,
+        "fields": {
+            "name": "phone777",
+            "description": "new",
+            "price": "123456.00",
+            "discount": 58,
+            "creted_at": "2024-05-25T17:25:10.767Z",
+            "archived": false,
+            "created_by": null
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 9,
+        "fields": {
+            "name": "laptop322",
+            "description": "the best",
+            "price": "100000.00",
+            "discount": 1,
+            "creted_at": "2024-06-09T09:36:51.542Z",
+            "archived": false,
+            "created_by": null
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 10,
+        "fields": {
+            "name": "Test_Phone",
+            "description": "qwerty",
+            "price": "50000.00",
+            "discount": 10,
+            "creted_at": "2024-06-09T09:39:12.391Z",
+            "archived": false,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 11,
+        "fields": {
+            "name": "mouse",
+            "description": "gaming mouse",
+            "price": "2000.00",
+            "discount": 10,
+            "creted_at": "2024-06-09T10:34:22.556Z",
+            "archived": false,
+            "created_by": 5
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 12,
+        "fields": {
+            "name": "monitor",
+            "description": "qwerty",
+            "price": "5000.00",
+            "discount": 1,
+            "creted_at": "2024-06-09T10:47:48.474Z",
+            "archived": false,
+            "created_by": 5
+        }
+    }
+]

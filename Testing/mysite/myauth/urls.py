@@ -34,4 +34,6 @@ urlpatterns = [
 
     path("session/set/", set_session_view, name="session-set"),
     path("session/get/", get_session_view, name="session-get"),
+
+   
 ]
