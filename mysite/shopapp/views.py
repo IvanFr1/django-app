@@ -3,7 +3,7 @@ from django.forms import BaseModelForm
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404, reverse # type: ignore
 from django.contrib.auth.models import Group
-from .models import Product, Order
+from .models import Product, Order, ProductImage
 from .forms import  GroupForm, ProductForm, OrderForm
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -45,7 +45,8 @@ class GroupListView(View):
 
 class ProductDetailsView(DetailView):
     template_name = 'shopapp/products-details.html'
-    model = Product
+    # model = Product
+    queryset = Product.objects.prefetch_related('images')
     context_object_name = 'product'
     
 
@@ -59,7 +60,7 @@ class ProductsListView(ListView):
 class ProductCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
  
     model = Product
-    fields = 'name', 'price', 'description', 'discount'
+    fields = 'name', 'price', 'description', 'discount', 'preview'
     success_url = reverse_lazy('shopapp:products_list')
 
     def test_func(self):
@@ -72,8 +73,9 @@ class ProductCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 
 class ProductUpdateView(UpdateView):
     model = Product
-    fields = 'name', 'price', 'description', 'discount'
+    # fields = 'name', 'price', 'description', 'discount', 'preview'
     template_name_suffix = '_update_form'
+    form_class = ProductForm
 
     def get_object(self, queryset=None):
         obj = super().get_object(queryset)
@@ -88,6 +90,18 @@ class ProductUpdateView(UpdateView):
             kwargs={'pk': self.object.pk}, # type: ignore
         )
         
+    def form_valid(self, form: ProductForm) -> HttpResponse:
+        response = super().form_valid(form)
+        
+        for image in self.request.FILES.getlist('images'):
+
+            ProductImage.objects.create(
+                product=self.object, # type: ignore
+                image=image,
+            )
+    
+        return response
+
 
 class ProductDeleteView(DeleteView):
     model = Product

@@ -9,6 +9,9 @@ from .views import (
     AboutMeView,
     RegisterView,
     FooBarView,
+    UpdateProfileView,
+    UsersListView,
+    UserDetailsView,
 )
 from django.contrib.auth.views import LoginView
 
@@ -27,6 +30,9 @@ urlpatterns = [
     # path('logout/', logout_view, name='logout'),
     path('logout/', MyLogoutView.as_view(), name='logout'),
     path('about-me/', AboutMeView.as_view(), name='about-me'),
+    path('profile/<int:pk>/update/', UpdateProfileView.as_view(), name='update_profile'),
+    path('users_list/', UsersListView.as_view(), name='users-list'),
+    path('users/<int:pk>/', UserDetailsView.as_view(), name='user_details'),
     path('register/', RegisterView.as_view(), name='register'),
 
     path('cookie/get/', get_cookie_view, name='cookie-get'),
