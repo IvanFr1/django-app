@@ -12,6 +12,7 @@ from .views import (
     UpdateProfileView,
     UsersListView,
     UserDetailsView,
+    HelloView,
 )
 from django.contrib.auth.views import LoginView
 
@@ -27,6 +28,7 @@ urlpatterns = [
         ),
         name='login',
     ),
+    path('hello/', HelloView.as_view(), name='hello'),
     # path('logout/', logout_view, name='logout'),
     path('logout/', MyLogoutView.as_view(), name='logout'),
     path('about-me/', AboutMeView.as_view(), name='about-me'),

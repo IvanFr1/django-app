@@ -10,8 +10,25 @@ from .models import Profile
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.utils.translation import gettext_lazy as _, ngettext
 # Create your views here.
 
+
+class HelloView(View):
+    welcome_message = _("welcome hello world!!!")
+    def get(self, request: HttpRequest) -> HttpResponse:
+        items_str = request.GET.get('items') or 0
+        items = int(items_str)
+        products_line = ngettext(
+            "one product",
+            "{count} products",
+            items
+        ) 
+        products_line = products_line.format(count=items)
+        return HttpResponse(
+            f"<h1>{self.welcome_message}</h1>"
+            f"\n<h2>{products_line}</h2>"
+        )
 
 class AboutMeView(LoginRequiredMixin, TemplateView):
     template_name = 'myauth/about-me.html'
