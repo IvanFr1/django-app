@@ -1,0 +1,50 @@
+2024-07-09 17:50:11,517 [INFO] shopapp.views Rendering shop index
+2024-07-09 17:50:11,737 [INFO] shopapp.views Rendering shop index
+2024-07-09 17:50:12,547 [INFO] shopapp.views Rendering shop index
+2024-07-09 17:51:03,783 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/settings.py changed, reloading.
+2024-07-09 17:51:04,152 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:04:51,972 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/settings.py changed, reloading.
+2024-07-09 18:04:52,240 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:05:50,635 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/settings.py changed, reloading.
+2024-07-09 18:05:50,903 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:06:42,972 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/settings.py changed, reloading.
+2024-07-09 18:06:43,217 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:08:05,596 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/urls.py changed, reloading.
+2024-07-09 18:08:05,904 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:09:11,189 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:10:01,924 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:10:50,066 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/settings.py changed, reloading.
+2024-07-09 18:10:50,350 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:10:50,720 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/settings.py changed, reloading.
+2024-07-09 18:10:51,000 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:11:01,186 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:11:44,331 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-09 18:11:57,862 [INFO] shopapp.views Rendering shop index
+2024-07-10 16:09:14,998 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-10 18:56:15,737 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-10 19:10:35,795 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-10 19:12:05,834 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-10 19:12:06,288 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-10 19:12:13,335 [ERROR] django.request Internal Server Error: /en/shop/products/export
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/shopapp/views.py", line 247, in get
+    1/0
+    ~^~
+ZeroDivisionError: division by zero
+2024-07-10 19:13:09,592 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-10 19:13:10,038 [INFO] django.utils.autoreload Watching for file changes with StatReloader
