@@ -1,4 +1,4 @@
-version: '3.9'
+# version: '3.9'
 
 services: 
   app:
@@ -16,19 +16,61 @@ services:
   grafana:
     image: grafana/grafana:11.1.0
     environment:
-      - GF_AUTH_ANONYMOUS_ENABLE=True
+      - GF_AUTH_ANONYMOUS_ENABLED=True
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
     ports:
       - "3000:3000"
     logging:
       driver: loki
       options:
-        # loki-url: http://localhost:3100/loki/api/v1/push
-        # loki-url: http://host.docker.internal:3100/loki/api/v1/push
-        # loki-url: http://10.0.2.15:3100/loki/api/v1/push
-          loki-url: http://loki:3100/loki/api/v1/push
+        loki-url: http://localhost:3100/loki/api/v1/push
+        # loki-url: http://loki:3100/loki/api/v1/push
   loki:
     image: grafana/loki:2.8.0
     ports:
       - "3100:3100"
-    # hostname: loki3100
+#     # hostname: loki3100
+
+# version: '3.9'
+
+# services: 
+#   app:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     command: 
+#       - "python"
+#       - "mysite/manage.py"
+#       - "runserver"
+#       - "0.0.0.0:8080"
+#     ports:
+#       - "8000:8080"
+#     networks:
+#       - loki-network
+
+#   grafana:
+#     image: grafana/grafana:11.1.0
+#     environment:
+#       - GF_AUTH_ANONYMOUS_ENABLE=True
+#       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+#     ports:
+#       - "3000:3000"
+#     logging:
+#       driver: loki
+#       options:
+#         loki-url: http://loki:3100/loki/api/v1/push
+#     depends_on:
+#       - loki
+#     networks:
+#       - loki-network
+
+#   loki:
+#     image: grafana/loki:2.8.0
+#     ports:
+#       - "3100:3100"
+#     networks:
+#       - loki-network
+
+# networks:
+#   loki-network:
+#     driver: bridge
