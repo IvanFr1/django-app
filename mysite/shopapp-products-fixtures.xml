@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="shopapp.product" pk="1">
+        <field name="name" type="CharField">Phone</field>
+        <field name="description" type="TextField">SDAADS</field>
+        <field name="price" type="DecimalField">2500.00</field>
+        <field name="discount" type="SmallIntegerField">10</field>
+        <field name="creted_at" type="DateTimeField">2024-07-10T16:10:40.809442+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="created_by" rel="ManyToOneRel" to="auth.user">
+            <None></None>
+        </field>
+        <field name="preview" type="FileField"></field>
+    </object>
+</django-objects>

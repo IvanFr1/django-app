@@ -1,0 +1,16 @@
+[
+    {
+        "model": "shopapp.product",
+        "pk": 1,
+        "fields": {
+            "name": "Phone",
+            "description": "SDAADS",
+            "price": "2500.00",
+            "discount": 10,
+            "creted_at": "2024-07-10T16:10:40.809Z",
+            "archived": false,
+            "created_by": null,
+            "preview": ""
+        }
+    }
+]

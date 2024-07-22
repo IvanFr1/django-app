@@ -48,3 +48,1595 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 2024-07-10 19:13:09,592 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
 2024-07-10 19:13:10,038 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-16 18:44:05,536 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-16 18:44:25,748 [WARNING] django.request Not Found: /
+2024-07-16 18:44:26,061 [WARNING] django.request Not Found: /favicon.ico
+2024-07-16 18:52:04,558 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-16 18:52:05,037 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-16 18:53:54,841 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-16 19:01:31,184 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-16 19:01:31,661 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-16 19:03:41,131 [ERROR] django.request Internal Server Error: /en/admin/shopapp/product/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: '{%'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 555, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: '{%', expected 'endblock'. Did you forget to register or load this tag?
+2024-07-16 19:03:43,143 [ERROR] django.request Internal Server Error: /en/admin/shopapp/product/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: '{%'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 555, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: '{%', expected 'endblock'. Did you forget to register or load this tag?
+2024-07-16 19:12:28,362 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-16 19:12:28,947 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-16 19:14:33,045 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-16 19:14:33,671 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-16 19:15:01,559 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-16 19:15:02,051 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-16 19:18:17,434 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-16 19:18:17,936 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-16 19:19:07,970 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-16 19:19:08,524 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 17:21:14,956 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 17:21:28,413 [WARNING] django.request Not Found: /
+2024-07-17 17:21:28,674 [WARNING] django.request Not Found: /favicon.ico
+2024-07-17 18:23:16,698 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 18:24:28,527 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 18:25:02,036 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-17 18:25:02,425 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 18:25:11,714 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 18:25:27,850 [WARNING] django.request Not Found: /favicon.ico
+2024-07-17 18:25:35,276 [WARNING] django.request Method Not Allowed: /en/shop/api/products/upload_csv/
+2024-07-17 18:32:25,780 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 18:33:09,936 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 18:33:21,964 [WARNING] django.request Not Found: /
+2024-07-17 18:33:22,102 [WARNING] django.request Not Found: /favicon.ico
+2024-07-17 18:52:29,507 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 19:06:46,632 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 19:07:01,511 [WARNING] django.request Not Found: /favicon.ico
+2024-07-17 19:07:09,125 [WARNING] django.request Not Found: /blog
+2024-07-17 19:07:26,925 [WARNING] django.request Not Found: /blog/article/review
+2024-07-17 19:07:33,629 [WARNING] django.request Not Found: /blog/article
+2024-07-17 19:07:42,895 [WARNING] django.request Not Found: /blogapp/article
+2024-07-17 19:10:07,983 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/urls.py changed, reloading.
+2024-07-17 19:10:08,384 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 19:14:35,362 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/urls.py changed, reloading.
+2024-07-17 19:14:35,797 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 19:17:46,003 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/admin.py changed, reloading.
+2024-07-17 19:17:46,402 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 19:20:29,945 [WARNING] django.request Not Found: /Blog/article/
+2024-07-17 19:20:38,114 [WARNING] django.request Not Found: /blog/article/
+2024-07-17 19:24:07,154 [ERROR] django.request Internal Server Error: /blog/articles/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'aticle' not found. 'aticle' is not a valid view function or pattern name.
+2024-07-17 19:24:41,590 [ERROR] django.request Internal Server Error: /blog/articles/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article' not found. 'article' is not a valid view function or pattern name.
+2024-07-17 19:25:23,281 [ERROR] django.request Internal Server Error: /blog/articles/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_list' with keyword arguments '{'pk': 1}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2024-07-17 19:26:52,585 [ERROR] django.request Internal Server Error: /blog/articles/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_list' with keyword arguments '{'pk': 1}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2024-07-17 19:26:53,528 [ERROR] django.request Internal Server Error: /blog/articles/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_list' with keyword arguments '{'pk': 1}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2024-07-17 19:26:54,667 [ERROR] django.request Internal Server Error: /blog/articles/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_list' with keyword arguments '{'pk': 1}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2024-07-17 19:28:25,612 [ERROR] django.request Internal Server Error: /blog/articles/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_list' with keyword arguments '{'pk': 1}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2024-07-17 19:31:33,487 [ERROR] django.request Internal Server Error: /blog/articles/1/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: BlogApp/article_detail.html
+2024-07-17 19:32:45,117 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/views.py changed, reloading.
+2024-07-17 19:32:45,575 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 19:33:11,138 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/models.py changed, reloading.
+2024-07-17 19:33:11,518 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 19:43:17,368 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-17 19:43:28,264 [WARNING] django.request Not Found: /favicon.ico
+2024-07-17 19:43:30,613 [ERROR] django.request Internal Server Error: /blog/articles/1/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 3: 'blog'. Did you forget to register or load this tag?
+2024-07-17 19:45:42,280 [ERROR] django.request Internal Server Error: /blog/articles/1/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'articles_list' not found. 'articles_list' is not a valid view function or pattern name.
+2024-07-18 18:02:01,972 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 18:02:16,012 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/urls.py changed, reloading.
+2024-07-18 18:02:16,392 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 18:03:41,115 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/urls.py changed, reloading.
+2024-07-18 18:03:41,503 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 18:03:43,771 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/urls.py changed, reloading.
+2024-07-18 18:03:44,121 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 18:04:09,826 [WARNING] django.request Not Found: /
+2024-07-18 18:04:10,084 [WARNING] django.request Not Found: /favicon.ico
+2024-07-18 18:04:27,415 [ERROR] django.request Internal Server Error: /blog/articles/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 187, in get_feed
+    title = self._get_dynamic_attr("item_title", item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 103, in _get_dynamic_attr
+    return attr(obj)
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/BlogApp/views.py", line 40, in item_title
+    return item_title
+           ^^^^^^^^^^
+NameError: name 'item_title' is not defined. Did you mean: 'self.item_title'?
+2024-07-18 18:04:56,263 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/views.py changed, reloading.
+2024-07-18 18:04:56,760 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 18:04:59,987 [ERROR] django.request Internal Server Error: /blog/articles/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 191, in get_feed
+    description = self._get_dynamic_attr("item_description", item)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 103, in _get_dynamic_attr
+    return attr(obj)
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/BlogApp/views.py", line 43, in item_description
+    return item.description[:200]
+           ^^^^^^^^^^^^^^^^
+AttributeError: 'Article' object has no attribute 'description'
+2024-07-18 18:05:55,645 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/views.py changed, reloading.
+2024-07-18 18:05:56,080 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 18:05:58,927 [ERROR] django.request Internal Server Error: /blog/articles/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 194, in get_feed
+    self._get_dynamic_attr("item_link", item),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 103, in _get_dynamic_attr
+    return attr(obj)
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/BlogApp/views.py", line 46, in item_link
+    return reverse("BlogApp:article_list", kwargs={'pk': item.pk})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_list' with keyword arguments '{'pk': 2}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2024-07-18 18:07:07,633 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/views.py changed, reloading.
+2024-07-18 18:07:08,064 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 18:07:10,168 [ERROR] django.request Internal Server Error: /blog/articles/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 194, in get_feed
+    self._get_dynamic_attr("item_link", item),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 103, in _get_dynamic_attr
+    return attr(obj)
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/BlogApp/views.py", line 46, in item_link
+    return reverse("BlogApp:article_list", kwargs={'pk': item.pk})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_list' with keyword arguments '{'pk': 2}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2024-07-18 18:07:44,880 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/views.py changed, reloading.
+2024-07-18 18:07:45,351 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 18:07:49,166 [ERROR] django.request Internal Server Error: /blog/articles/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 194, in get_feed
+    self._get_dynamic_attr("item_link", item),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 103, in _get_dynamic_attr
+    return attr(obj)
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/BlogApp/views.py", line 46, in item_link
+    return reverse("BlogApp:article", kwargs={'pk': item.pk})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article' not found. 'article' is not a valid view function or pattern name.
+2024-07-18 18:08:11,706 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/views.py changed, reloading.
+2024-07-18 18:08:12,199 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 18:08:16,387 [ERROR] django.request Internal Server Error: /blog/articles/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 194, in get_feed
+    self._get_dynamic_attr("item_link", item),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 103, in _get_dynamic_attr
+    return attr(obj)
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/BlogApp/views.py", line 46, in item_link
+    return reverse("BlogApp:article_list", kwargs={'pk': item.pk})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_list' with keyword arguments '{'pk': 2}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2024-07-18 18:11:04,766 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/views.py changed, reloading.
+2024-07-18 18:11:05,203 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 19:31:12,624 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 19:31:52,455 [ERROR] django.request Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: sitemap.xml
+2024-07-18 19:31:52,742 [WARNING] django.request Not Found: /favicon.ico
+2024-07-18 19:32:41,642 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/settings.py changed, reloading.
+2024-07-18 19:32:42,044 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-18 19:34:53,197 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/settings.py changed, reloading.
+2024-07-18 19:34:53,576 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 17:46:57,123 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 17:47:13,081 [WARNING] django.request Not Found: /
+2024-07-21 17:47:13,308 [WARNING] django.request Not Found: /favicon.ico
+2024-07-21 18:27:48,856 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-21 18:27:49,357 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 18:35:01,917 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-21 18:35:02,406 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 18:41:38,470 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/BlogApp/sitemap.py changed, reloading.
+2024-07-21 18:41:38,916 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 18:54:47,296 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-21 18:54:47,731 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 18:55:03,942 [ERROR] django.request Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_products(
+  File "/home/ivan/Documents/python_django/mysite/shopapp/common.py", line 16, in save_csv_products
+    Product(**row)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Product() got unexpected keyword arguments: 'delivery_address', 'promocode', 'user', 'products'
+2024-07-21 19:03:56,028 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/common.py changed, reloading.
+2024-07-21 19:03:56,415 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 19:04:46,172 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/admin.py changed, reloading.
+2024-07-21 19:04:46,568 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 19:05:03,255 [ERROR] django.request Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/ivan/Documents/python_django/mysite/shopapp/common.py", line 31, in save_csv_orders
+    Order(**row)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 284, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'1'": "Order.user" must be a "User" instance.
+2024-07-21 19:11:36,370 [ERROR] django.request Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/ivan/Documents/python_django/mysite/shopapp/common.py", line 31, in save_csv_orders
+    Order(**row)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 284, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'1'": "Order.user" must be a "User" instance.
+2024-07-21 19:18:20,330 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/common.py changed, reloading.
+2024-07-21 19:18:20,710 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 19:23:22,674 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/common.py changed, reloading.
+2024-07-21 19:23:23,103 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 19:24:08,202 [ERROR] django.request Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/ivan/Documents/python_django/mysite/shopapp/common.py", line 33, in save_csv_orders
+    order = Order(
+            ^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 284, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'1'": "Order.user" must be a "User" instance.
+2024-07-21 19:26:28,918 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/common.py changed, reloading.
+2024-07-21 19:26:29,380 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 19:26:52,800 [WARNING] django.request Not Found: /favicon.ico
+2024-07-21 19:28:36,156 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/common.py changed, reloading.
+2024-07-21 19:28:36,578 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 19:28:47,406 [ERROR] django.request Internal Server Error: /en/admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/shopapp/admin.py", line 140, in import_csv
+    save_csv_orders(
+  File "/home/ivan/Documents/python_django/mysite/shopapp/common.py", line 41, in save_csv_orders
+    orders.append[user]
+    ~~~~~~~~~~~~~^^^^^^
+TypeError: 'builtin_function_or_method' object is not subscriptable
+2024-07-21 19:33:44,130 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/common.py changed, reloading.
+2024-07-21 19:33:44,534 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 19:34:24,304 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/common.py changed, reloading.
+2024-07-21 19:34:24,762 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-21 19:36:44,579 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/common.py changed, reloading.
+2024-07-21 19:36:45,004 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:00:32,570 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:00:55,051 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 19:00:55,394 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:01:08,108 [WARNING] django.request Not Found: /favicon.ico
+2024-07-22 19:01:21,311 [WARNING] django.request Not Found: /shopapp/products
+2024-07-22 19:01:26,617 [WARNING] django.request Not Found: /shopapp/product
+2024-07-22 19:02:50,312 [WARNING] django.request Not Found: /shopapp/products
+2024-07-22 19:03:16,584 [WARNING] django.request Not Found: /shopapp
+2024-07-22 19:03:43,645 [WARNING] django.request Not Found: /shopapp/orders
+2024-07-22 19:04:27,434 [WARNING] django.request Not Found: /shopapp/api
+2024-07-22 19:06:20,987 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:06:53,610 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 19:06:54,143 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:14:59,972 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 19:15:00,558 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:18:01,895 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 19:18:02,541 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:19:36,342 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 19:19:36,911 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:21:07,712 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-22 19:21:08,210 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:21:13,646 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-22 19:21:14,290 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:21:54,327 [ERROR] django.request Internal Server Error: /en/shop/products/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 143, in get_feed
+    link = add_domain(current_site.domain, link, request.is_secure())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 17, in add_domain
+    if url.startswith("//"):
+       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/utils/functional.py", line 187, in __wrapper__
+    result = func(*self._args, **self._kw)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'products' not found. 'products' is not a valid view function or pattern name.
+2024-07-22 19:22:27,017 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-22 19:22:27,562 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:22:36,443 [ERROR] django.request Internal Server Error: /en/shop/products/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 143, in get_feed
+    link = add_domain(current_site.domain, link, request.is_secure())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 17, in add_domain
+    if url.startswith("//"):
+       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/utils/functional.py", line 187, in __wrapper__
+    result = func(*self._args, **self._kw)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'products' not found. 'products' is not a valid view function or pattern name.
+2024-07-22 19:22:38,082 [ERROR] django.request Internal Server Error: /en/shop/products/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 143, in get_feed
+    link = add_domain(current_site.domain, link, request.is_secure())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 17, in add_domain
+    if url.startswith("//"):
+       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/utils/functional.py", line 187, in __wrapper__
+    result = func(*self._args, **self._kw)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'products' not found. 'products' is not a valid view function or pattern name.
+2024-07-22 19:28:59,798 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 19:29:00,414 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:29:04,114 [ERROR] django.request Internal Server Error: /en/shop/products/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'shop'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 143, in get_feed
+    link = add_domain(current_site.domain, link, request.is_secure())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 17, in add_domain
+    if url.startswith("//"):
+       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/utils/functional.py", line 187, in __wrapper__
+    result = func(*self._args, **self._kw)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'shop' is not a registered namespace
+2024-07-22 19:29:45,689 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 19:29:46,290 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:29:51,076 [ERROR] django.request Internal Server Error: /en/shop/products/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 187, in get_feed
+    title = self._get_dynamic_attr("item_title", item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 103, in _get_dynamic_attr
+    return attr(obj)
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/shopapp/views.py", line 333, in item_title
+    return item.title
+           ^^^^^^^^^^
+AttributeError: 'Product' object has no attribute 'title'
+2024-07-22 19:30:18,363 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 19:30:18,939 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:30:21,711 [ERROR] django.request Internal Server Error: /en/shop/products/latest/feed/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'shop'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 40, in __call__
+    feedgen = self.get_feed(obj, request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 194, in get_feed
+    self._get_dynamic_attr("item_link", item),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/syndication/views.py", line 103, in _get_dynamic_attr
+    return attr(obj)
+           ^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/shopapp/views.py", line 339, in item_link
+    return reverse("shop:product_details", kwargs={"pk": item.pk})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'shop' is not a registered namespace
+2024-07-22 19:30:36,696 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 19:30:37,419 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 19:31:03,411 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 19:31:04,122 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 20:05:09,046 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-22 20:05:09,420 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 20:06:10,631 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/models.py changed, reloading.
+2024-07-22 20:06:11,153 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 20:07:11,958 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/sitemaps.py changed, reloading.
+2024-07-22 20:07:12,266 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 20:11:00,978 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 20:13:04,497 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/sitemap.py changed, reloading.
+2024-07-22 20:13:04,832 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-22 20:13:35,830 [WARNING] django.request Not Found: /en/sitemap.xml
+2024-07-22 20:14:13,884 [WARNING] django.request Not Found: /shop/sitemap.xml
+2024-07-22 20:15:23,169 [WARNING] django.request Not Found: /sitemaps.xml
+2024-07-22 20:15:29,991 [WARNING] django.request Not Found: /sitemaps.xml
+2024-07-22 20:15:35,699 [ERROR] django.request Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 90, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/sitemaps/views.py", line 23, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/sitemaps/views.py", line 117, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/sitemaps/__init__.py", line 104, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _urls
+    paginator_page = self.paginator.page(page)
+                     ^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/sitemaps/__init__.py", line 73, in paginator
+    return paginator.Paginator(self._items(), self.limit)
+                               ^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/contrib/sitemaps/__init__.py", line 61, in _items
+    return self.items()
+           ^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/mysite/shopapp/sitemap.py", line 11, in items
+    return Product.objects.filter(creted_at_isnull=False).order_by('-creted_at')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1495, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1307, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'creted_at_isnull' into field. Choices are: archived, created_by, created_by_id, creted_at, description, discount, id, images, name, orders, preview, price
+2024-07-22 20:17:51,201 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/sitemap.py changed, reloading.
+2024-07-22 20:17:51,590 [INFO] django.utils.autoreload Watching for file changes with StatReloader

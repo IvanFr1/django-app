@@ -12,7 +12,7 @@
                 {% for article in articles %}
 
                     <li>
-                        <h2>{{ article.title }}</h2>
+                        <a href="{% url "BlogApp:article_detail" pk=article.id %}">{{ article.title }}</a>
                         {% comment %} <p>{{ article.content }}</p> {% endcomment %}
                         <p><strong>Author:</strong>{{ article.author.name }}</p>
                         <p><strong>Category:</strong>{{ article.category.name }}</p>
