@@ -1640,3 +1640,172 @@ Traceback (most recent call last):
 django.core.exceptions.FieldError: Cannot resolve keyword 'creted_at_isnull' into field. Choices are: archived, created_by, created_by_id, creted_at, description, discount, id, images, name, orders, preview, price
 2024-07-22 20:17:51,201 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/sitemap.py changed, reloading.
 2024-07-22 20:17:51,590 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 19:44:37,801 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 19:45:14,390 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 19:45:26,840 [WARNING] django.request Not Found: /
+2024-07-26 19:45:27,063 [WARNING] django.request Not Found: /favicon.ico
+2024-07-26 19:45:42,625 [INFO] shopapp.views Rendering shop index
+2024-07-26 19:49:52,514 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/settings.py changed, reloading.
+2024-07-26 19:49:52,898 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 19:54:36,824 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 19:54:49,076 [WARNING] django.request Not Found: /myauth
+2024-07-26 19:54:57,689 [WARNING] django.request Not Found: /account
+2024-07-26 19:55:17,115 [WARNING] django.request Not Found: /account/cookieget
+2024-07-26 19:55:30,434 [WARNING] django.request Not Found: /account/cookie/get
+2024-07-26 19:55:45,077 [WARNING] django.request Not Found: /myauth/cookie/get
+2024-07-26 19:58:39,512 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/myauth/views.py changed, reloading.
+2024-07-26 19:58:39,917 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:00:41,307 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/myauth/views.py changed, reloading.
+2024-07-26 20:00:41,649 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:04:13,032 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-26 20:04:13,435 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:05:06,168 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-26 20:05:06,551 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:06:03,237 [INFO] shopapp.views Rendering shop index
+2024-07-26 20:11:43,936 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-26 20:11:44,289 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:14:25,149 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-26 20:14:25,579 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:15:14,270 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-26 20:15:14,603 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:16:33,650 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-26 20:16:34,119 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:17:48,050 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-26 20:17:48,389 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:17:51,624 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-26 20:17:51,970 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:18:34,702 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-26 20:18:35,103 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-26 20:18:54,006 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:20,684 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 14:59:37,213 [WARNING] django.request Not Found: /
+2024-07-27 14:59:37,389 [WARNING] django.request Not Found: /favicon.ico
+2024-07-27 14:59:41,900 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:46,048 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:46,754 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:47,277 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:47,720 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:48,171 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:48,584 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:49,056 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:49,496 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:49,945 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:50,385 [INFO] shopapp.views Rendering shop index
+2024-07-27 14:59:50,821 [INFO] shopapp.views Rendering shop index
+2024-07-27 15:24:47,625 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-27 15:24:48,064 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 15:27:18,852 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-27 15:27:19,236 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 15:29:40,873 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-27 15:29:41,245 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 15:31:24,489 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-27 15:31:25,041 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 15:31:57,282 [INFO] shopapp.views Rendering shop index
+2024-07-27 15:38:15,801 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/mysite/settings.py changed, reloading.
+2024-07-27 15:38:16,203 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 16:52:41,768 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-27 16:52:42,122 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 16:52:43,373 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-27 16:52:43,716 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 16:53:31,412 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-27 16:53:31,765 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 16:57:26,409 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-27 16:57:26,746 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 16:59:52,385 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-27 16:59:52,742 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 17:10:35,342 [WARNING] django.request Not Found: /users
+2024-07-27 17:10:50,379 [INFO] shopapp.views Rendering shop index
+2024-07-27 17:13:50,887 [WARNING] django.request Not Found: /en/shop/user-orders
+2024-07-27 17:19:50,810 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-27 17:19:51,214 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 17:19:54,665 [ERROR] django.request Internal Server Error: /en/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 41, in sentry_patched_render
+    return old_render(self)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/utils.py", line 1713, in runner
+    return sentry_patched_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/sentry_sdk/integrations/django/templates.py", line 77, in rendered_content
+    return real_rendered_content.fget(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/Documents/python_django/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'order_details' not found. 'order_details' is not a valid view function or pattern name.
+2024-07-27 17:20:31,969 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/urls.py changed, reloading.
+2024-07-27 17:20:32,368 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 17:22:01,773 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-27 17:22:02,211 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 17:22:44,843 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-27 17:22:45,210 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-07-27 17:24:02,092 [INFO] django.utils.autoreload /home/ivan/Documents/python_django/mysite/shopapp/views.py changed, reloading.
+2024-07-27 17:24:02,442 [INFO] django.utils.autoreload Watching for file changes with StatReloader
