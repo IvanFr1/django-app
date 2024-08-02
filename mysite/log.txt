@@ -1812,3 +1812,5 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'order_details' not found. 'o
 2024-08-02 18:56:28,475 [INFO] django.utils.autoreload Watching for file changes with StatReloader
 2024-08-02 18:59:35,943 [INFO] django.utils.autoreload Watching for file changes with StatReloader
 2024-08-02 19:10:19,826 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-08-02 19:38:35,576 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-08-02 19:51:47,907 [INFO] django.utils.autoreload Watching for file changes with StatReloader
